@@ -1,0 +1,28 @@
+<div class="login">
+
+    <form [formGroup]="loginData" action="" class="log-in" autocomplete="off">
+
+        <div class="login-header">
+            <br>
+            <br>
+        </div>
+
+        <div class="login-form">
+
+            <div class="floating-label">
+                <label for="login">Login</label>
+            </div>
+
+            <h3>Email:</h3>
+            <input type="text" formControlName="email" placeholder="email" />
+
+            <h3>Password:</h3>
+            <input type="password" formControlName="password" placeholder="Password">
+
+            <button (keypress)="login()" (click)="login()" type="button" value="Login" class="login-button">
+                Entrar
+            </button>
+            <br>
+        </div>
+    </form>
+</div>

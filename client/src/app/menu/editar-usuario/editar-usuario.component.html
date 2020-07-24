@@ -1,0 +1,78 @@
+<section class="homescreen m-0 flex flex-col w-screen justify-center bg-gray-800 h-screen text-gray-100 ">
+    <nav>
+        <ul class="flex justify-between text-xl py-8 px-8 md:px-48 ">
+            <li>
+                Editar usuario
+            </li>
+            <li>
+                <a href="" target="_blank" rel="noopener noreferrer">Nuevo usuario</a>
+            </li>
+        </ul>
+    </nav>
+
+    <h1>
+        <div class="px-40">
+            <form [formGroup]="crearUsuarioForm" class="w-full max-w-lg">
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                            Nombre
+                        </label>
+                        <input formControlName='name' [(ngModel)]="usuario.name" name="nombre"
+                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                            type="text">
+                    </div>
+                    <div class="w-full md:w-1/2 px-3">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                            Apellido
+                        </label>
+                        <input formControlName='lastname' [(ngModel)]="usuario.lastname" name="apellido"
+                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            type="text">
+                    </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                            Email
+                        </label>
+                        <input formControlName='email' [(ngModel)]="usuario.email" name="email"
+                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                            type="email">
+                    </div>
+                    <div class="w-full md:w-1/2 px-3">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                            Edad
+                        </label>
+                        <input formControlName='age' [(ngModel)]="usuario.age" name="edad"
+                            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                            type="number">
+                    </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-2">
+
+                    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                            for="grid-state">
+                            Rol
+                        </label>
+                        <div class="relative">
+                            <select formControlName='rol' name="rol" [(ngModel)]="usuario.rol"
+                                class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                id="grid-state">
+                                <option>{{usuario.rol}}</option>
+                                <option>Administrador</option>
+                                <option>Estudiante</option>
+                            </select>
+                            <div
+                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button (click)="update()" type="submit"
+                    class="bg-pink-400  text-white font-bold py-2 px-10 rounded-full" name="button">Guardar</button>
+            </form>
+        </div>
+    </h1>
+</section>
