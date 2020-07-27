@@ -24,9 +24,11 @@
     "@angular/service-worker": "~10.0.2",
     "@auth0/angular-jwt": "^5.0.1",
     "jwt-decode": "^2.2.0",
+    "lite": "^4.0.5",
     "ngx-socket-io": "^3.2.0",
     "ngx-spinner": "^10.0.0",
     "rxjs": "~6.5.5",
+    "server": "^1.0.29",
     "sweetalert2": "^9.17.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
